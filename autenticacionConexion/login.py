@@ -4,7 +4,7 @@ from supabase import create_client
 
 
 SUPABASE_URL = "https://rritlxjwzrjqbmpfurbt.supabase.co"
-SUPABASE_ANON_KEY = "XRseGp3enJqcWJtcGZ1cmJ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQxNDI2MzQsImV4cCI6MjA5OTcxODYzNH0.1pbkRBSxvZyDMlvlGR9XhAZPZFdejdyjOpRXwASjBA8"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJyaXRseGp3enJqcWJtcGZ1cmJ0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQxNDI2MzQsImV4cCI6MjA5OTcxODYzNH0.1pbkRBSxvZyDMlvlGR9XhAZPZFdejdyjOpRXwASjBA8"
 
 
 class Login:
