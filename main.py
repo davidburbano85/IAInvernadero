@@ -108,6 +108,7 @@
 #         print(prediccion)
 
 
+
 import numpy as np
 
 from config.configuracion import SEMILLA
@@ -184,3 +185,4 @@ def ejecutar_modelo(jwt: str):
         "metricas": metricas,
         "predicciones": predicciones
     }
+
