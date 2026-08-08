@@ -1,11 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
 from autenticacionConexion.login import Login
 from main import ejecutar_modelo
 
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4200"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # JWT almacenado en memoria mientras la API esté ejecutándose
 jwt_actual = None

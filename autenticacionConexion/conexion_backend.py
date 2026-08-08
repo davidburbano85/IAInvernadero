@@ -7,20 +7,8 @@ from config.configuracion import (
 
 
 def obtener_datos_backend():
-
     url = BACKEND_URL + ENDPOINT_SENSORES
-
-
-    respuesta = requests.get(
-        url,
-        timeout=10
-    )
-
-
+    respuesta = requests.get(url,timeout=10)
     respuesta.raise_for_status()
-
-
     datos = respuesta.json()
-
-
     return datos

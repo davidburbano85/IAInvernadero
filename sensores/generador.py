@@ -99,3 +99,5 @@ class Generador:
             "instrumentos": list(instrumentos.values()),
             "mediciones": resultado,
         }
+
+    

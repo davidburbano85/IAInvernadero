@@ -5,16 +5,13 @@ from config.configuracion import SEMILLA
 
 
 def entrenar(datos):
-
     entrenamiento, prueba = train_test_split(
         datos,
         test_size=0.2,
         random_state=SEMILLA
     )
-
     y_entrenamiento = entrenamiento["Clase"]
     y_prueba = prueba["Clase"]
-
     x_entrenamiento = entrenamiento.drop(
         columns=[
             "Clase",

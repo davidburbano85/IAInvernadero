@@ -2,11 +2,8 @@ import pandas as pd
 
 
 def crear_dataframe(datos):
-
     return pd.DataFrame(datos)
-
 def preparar_datos(df):
-
     unidades = {
         "°C": 1,
         "%": 2,
@@ -35,12 +32,10 @@ def clasificar_mediciones(df):
     }
 
     def clasificar(fila):
-
         minimo, maximo = rangos.get(
             fila["unidad_medicion"],
             (None, None)
         )
-
         if minimo is None:
             return -1
 
