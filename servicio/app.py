@@ -18,7 +18,7 @@ app.add_middleware(
 
 
 class SolicitudInteligencia(BaseModel):
-    controladorId: int
+    invernaderoId: int
 
 
 @app.post("/ejecutar")
@@ -51,7 +51,7 @@ def ejecutar(
 
         return ejecutar_modelo(
             jwt,
-            solicitud.controladorId
+            solicitud.invernaderoId
         )
 
     except Exception as error:
