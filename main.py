@@ -24,11 +24,16 @@ from analisis.estadistica import obtener_estadisticas
 np.random.seed(SEMILLA)
 
 
-def ejecutar_modelo(jwt: str, controlador_id: int) :
+def ejecutar_modelo(
+    jwt: str,
+    invernadero_id: int
+):
 
-    generador = Generador(jwt, controlador_id)
+    generador = Generador(jwt)
 
-    datos_backend = generador.generar()
+    datos_backend = generador.generar(
+        invernadero_id
+    )
 
     mediciones = datos_backend["mediciones"]
 
@@ -76,4 +81,3 @@ def ejecutar_modelo(jwt: str, controlador_id: int) :
         "metricas": metricas,
         "predicciones": predicciones
     }
-
